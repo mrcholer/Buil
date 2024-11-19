@@ -1,12 +1,10 @@
 import React, { useState } from 'react';
 import '../styles/home.css';
 import Modal from '../components/modal';
-import { BiFontFamily } from 'react-icons/bi';
 
 const BuilderBot = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [modalContent, setModalContent] = useState({ title: '', description: '' });
-  const [embedColor, setEmbedColor] = useState('rgb(0, 153, 255)');
   const [isColorPickerVisible, setIsColorPickerVisible] = useState(false);
 
   const openModal = (title: string, description: string) => {
@@ -15,17 +13,8 @@ const BuilderBot = () => {
   };
 
   const closeModal = () => setIsModalOpen(false);
-
-  const handleColorChange = (color: string) => {
-    setEmbedColor(color);
-  };
-
   const toggleColorPicker = () => {
     setIsColorPickerVisible(!isColorPickerVisible);
-  };
-
-  const handleCustomColorChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    setEmbedColor(event.target.value);
   };
 
   return (
@@ -39,6 +28,10 @@ const BuilderBot = () => {
           BuilderBot is a professional bot that allows you to fully control it with beautiful and wonderful features, in
           addition to giving you also add buttons or select menu for roles or a hidden private message.
         </span>
+        <div className='btns'>
+          <a className='btn' href="https://discord.gg/RTQsBfBT">Invite Me</a>
+          <a className='btn' href="">Dashboard</a>
+        </div>
       </div>
       <div className="back">
         <h1 className="ext">Pannel Config</h1>
