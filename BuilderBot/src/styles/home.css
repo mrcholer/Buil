@@ -1,0 +1,139 @@
+.navbar {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: rgba(30, 30, 44, 0.7);
+    padding: 0px 10px;
+    font-size: 15px;
+    backdrop-filter: blur(5px);
+    position: relative;
+    top: -100px;
+    animation: moveDown 1s ease-out forwards; 
+}
+
+@keyframes moveDown {
+    0% {
+        top: -100px;
+    }
+    100% {
+        top: 0;
+    }
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    font-size: 20px;
+}
+
+.back {
+  background-color: #14142b;
+  margin: 0;
+  padding: 0;
+}
+
+.ext {
+  padding-left: 10px;
+  padding-top: 10px;
+}
+
+.embed {
+    padding: 5px 10px;
+    margin: 10px 10px;
+    border-radius: 5px;
+    background-color: #1e1e2c;
+    box-shadow: 5px 0px 5px 5px #050620;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    left: -300px; 
+    animation: slideInFromLeft 1.9s ease-out forwards; 
+}
+
+.embed .preview {
+    background-color: rgb(23, 25, 27);
+    margin-left: 65px;
+    padding: 10px 20px;
+    max-width: 520px;
+    border-left: 4px solid green;
+    border-radius: 5px 5px 5px 5px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.bot {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 5px;
+    justify-items: left;
+}
+
+.avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.username {
+    margin: 3px 10px;
+    font-size: 20px;
+}
+
+.username .badge {
+    background-color: rgb(0, 132, 255);
+    padding: 0px 5px;
+    border-radius: 6px;
+    font-size: 18px;
+}
+
+.left .title {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #00b0f4;
+    text-decoration: none;
+}
+
+.message {
+    font-size: large;
+    padding: 0;
+    margin: 0;
+}
+
+.buttons {
+    margin: 10px 65px;
+    max-width: 520px;
+    animation: slideInFromLeft 0.8s ease-out forwards;
+}
+
+.buttons button {
+    border: none;
+    pointer-events: auto;
+    cursor: pointer;
+    padding: 10px 15px;
+    border-radius: 3px;
+    margin: 2px 2px;
+    color: #ffffff;
+    transition: background-color 0.3s ease;
+}
+
+.buttons button.blue {
+    background-color: #5865f2;
+}
+
+.buttons button.secondary {
+    background-color: #4f545c;
+}
+
+.buttons button.success {
+    background-color: #3ba55c;
+}
+
+@keyframes slideInFromLeft {
+    0% {
+        left: -300px;
+    }
+    100% {
+        left: 0;
+    }
+}
